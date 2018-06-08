@@ -1,0 +1,3 @@
+
+person: [ id=2; name=Slava; address=address2; cash=20000.0; education=NAU;]
+person: [ id=3; name=Vlad; address=address3; cash=300000.0; education=Sheva;]
