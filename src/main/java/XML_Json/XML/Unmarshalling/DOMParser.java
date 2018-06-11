@@ -11,6 +11,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -21,11 +22,10 @@ public class DOMParser implements IParser {
     @Override
     public List<Person> unmarshalling(String filepath) throws ParserConfigurationException, IOException, SAXException {
         File xmlFile = new File(filepath);
+        List<Person> persons = new ArrayList<>();
         DocumentBuilderFactory documentBuilderFactory =
                 DocumentBuilderFactory.newInstance();
 
-        /*documentBuilderFactory.setValidating(true);
-        documentBuilderFactory.setNamespaceAware(false);*/
 
         Document document = documentBuilderFactory
                 .newDocumentBuilder()

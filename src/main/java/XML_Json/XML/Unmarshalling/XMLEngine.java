@@ -35,24 +35,12 @@ public class XMLEngine {
 
     }
 
-
-    public static void main(String[] args) {
-
-        try {
-            List<Person> resultList =  XMLEngine.parseXML(new DOMParser());
-            resultList =  resultList.stream().filter((person) -> person.getCash() > 10000).collect(Collectors.toList());
-            XMLEngine.consoleWriter(resultList);
-            XMLEngine.fileWriter(IParser.FILEPATH+"out1.txt",resultList);
-
-            resultList = XMLEngine.parseXML(new SAXParser());
-            resultList =  resultList.stream().filter((person) -> person.getCash() > 10000).collect(Collectors.toList());
-            XMLEngine.consoleWriter(resultList);
-            XMLEngine.fileWriter(IParser.FILEPATH+"out2.txt",resultList);
-
-        } catch (ParserConfigurationException | IOException | SAXException e) {
-            e.printStackTrace();
-        }
-
-
+    public static List<Person> cashFilter(List<Person> persons, double cash){
+       return persons.stream().filter((person) -> person.getCash() > cash).collect(Collectors.toList());
     }
+
+    public static List<Person> cashFilter(List<Person> persons){
+       return cashFilter(persons, 10000);
+    }
+
 }

@@ -6,6 +6,9 @@ import javax.xml.bind.Marshaller;
 import java.io.File;
 
 public class JAXBimpl {
+
+    public static String FILEPATH = "./src/main/resources/output/";
+    public static String FILENAME = "catalog.xml";
     private static Marshaller jaxbMarshaller;
 
     public static void marshal(String filepath, Catalog list) throws JAXBException {

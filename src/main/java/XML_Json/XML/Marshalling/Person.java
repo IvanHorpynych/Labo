@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.*;
 
 @XmlRootElement(name = "person")
 @XmlAccessorType(XmlAccessType.FIELD)
-public class Person {
+public class Person implements Comparable {
     public static String TAG_ID = "id";
     public static String TAG_NAME = "name";
     public static String TAG_ADDRESS = "address";
@@ -67,10 +67,32 @@ public class Person {
     @Override
     public String toString() {
         return "person: " +
-                "[ id=" + getId()+
-                "; name="+getName()+
-                "; address="+getAddress()+
-                "; cash="+getCash()+
-                "; education="+getEducation()+";]";
+                "[ id=" + getId() +
+                "; name=" + getName() +
+                "; address=" + getAddress() +
+                "; cash=" + getCash() +
+                "; education=" + getEducation() + ";]";
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (cash < ((Person) o).getCash())
+            return -1;
+        else if (cash > ((Person) o).getCash())
+            return 1;
+        else
+            return 0;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (id != ((Person) obj).getId()
+                || !name.equals(((Person) obj).getName())
+                || !address.equals(((Person) obj).getAddress())
+                || cash != ((Person) obj).getCash()
+                || !education.equals(((Person) obj).getEducation())) {
+            return false;
+        }
+        return true;
     }
 }

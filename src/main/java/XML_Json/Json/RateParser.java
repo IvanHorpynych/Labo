@@ -43,15 +43,10 @@ public class RateParser {
                 Collectors.toMap(Rate::getCc, Rate::getRate));
     }
 
-    public static Map<String, Double> getSpecifiedRatesMap(String...options){
+    public static Map<String, Double> getRatesMap(String...options){
         return getRatesMap().entrySet().stream().filter(set->
                 Arrays.asList(options).contains(set.getKey()))
                 .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
-    public static void main(String[] args) {
-        System.out.println(getActualRates());
-        System.out.println(getRatesMap());
-        System.out.println(getSpecifiedRatesMap("EUR","RUB","USD"));
-    }
 }

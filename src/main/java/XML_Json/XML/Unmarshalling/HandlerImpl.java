@@ -18,20 +18,20 @@ public class HandlerImpl extends DefaultHandler {
     }
     @Override
     public void startDocument() throws SAXException {
-        tempPerson = new Person();
     }
 
     @Override
     public void startElement(String namespaceURI, String localName, String qName, Attributes atts) throws SAXException {
         thisElement = qName;
-        if(thisElement.equals(Person.TAG_PERSON))
+        if(thisElement.equals(Person.TAG_PERSON)) {
+            tempPerson = new Person();
+            persons.add(tempPerson);
             tempPerson.setId(Integer.valueOf(atts.getValue(0)));
+        }
     }
 
     @Override
     public void endElement(String namespaceURI, String localName, String qName) throws SAXException {
-        if(thisElement.equals(Person.TAG_PERSON))
-            persons.add(tempPerson);
         thisElement = "";
     }
 
