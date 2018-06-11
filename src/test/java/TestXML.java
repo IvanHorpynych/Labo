@@ -111,7 +111,7 @@ public class TestXML extends Assert {
 
 
     @SuppressWarnings("unchecked")
-    public  boolean equalLists(List<Person> first, List<Person> second){
+    private boolean equalLists(List<Person> first, List<Person> second){
         if (first == null && second == null){
             return true;
         }
