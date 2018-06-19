@@ -1,3 +1,5 @@
+package XML_Json;
+
 import XML_Json.Json.RateParser;
 import org.junit.Assert;
 import org.junit.Test;

@@ -1,3 +1,5 @@
+package XML_Json;
+
 import XML_Json.XML.Marshalling.Catalog;
 import XML_Json.XML.Marshalling.JAXBimpl;
 import XML_Json.XML.Marshalling.Notebook;
