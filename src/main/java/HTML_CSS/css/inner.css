@@ -1,0 +1,63 @@
+
+.top-table{
+  width: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-top: 8px;
+}
+
+table.top-table thead th {
+  border-top: 1px solid #696969; 
+  border-bottom: 1px solid #696969; 
+}
+
+table.top-table tbody tr td{
+  border-bottom: 1px solid #696969; 
+  padding-top: 3px;
+  padding-bottom: 3px; 
+}
+
+.delete-link {
+  color:Red;
+}
+
+a {
+  color:Blue;
+}
+
+.input-horizontal-block{
+    width: 95%;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.fixed-button-size{
+  width: 15%;
+  padding-right: 5px;
+}
+
+.fixed-input-size-with_button{
+  width: 85%;
+}
+
+.fixed-input-size-without_button{
+  width: 100%;
+}
+
+div.fixed-input-size-with_button > input, 
+div.fixed-button-size > input, 
+div.fixed-input-size-without_button > input{
+  width: 100%;
+}
+
+.left-center_align_block{
+  display: flex; 
+  justify-content: flex-start;
+}
+
+.label-text{
+    text-align: right;
+    width: 12%;
+}

@@ -1,0 +1,21 @@
+
+.vertical-input-block{
+  width: 87%;
+  padding: 0px;
+  padding-left: 0px;
+  margin: 0px;
+  display: flex; 
+  align-items: center;
+}
+
+.input-text-block{
+  width: 13%;
+  padding: 0px;
+  text-align: right;
+  padding-right: 2px;
+  margin: 0px;
+}
+
+div.vertical-input-block input {
+  margin: 0px;
+}

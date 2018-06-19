@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<link rel="stylesheet" href="css/style.css">
+    	<link rel="stylesheet" href="css/inner.css">
+    </head>
+    <title>Inner page</title>
+ 
+    <body>
+    	<div class="main">
+			<header  class="bottom-line">
+				<img src="image/folder.png" alt="альтернативный текст"/>
+				<div class="head-text"  >
+					Файловое хранилище
+				</div>
+				<img src="image/folder.png" alt="альтернативный текст"/>
+			</header>
+
+		    <div class="string pull-text-right bottom-line">
+		    	Вы вошли в систему как <b>Иванов Иван Иванович.</b> <a href="index.html">Выйти.</a>
+		    </div>
+
+            <div class="container bottom-line">
+			<div id="left-bar">
+				<div class="text-block">
+			   		<b>Можно загружать:</b></br>
+			   		ZIP(до 20 Mb);</br>
+			   		DOCX (до 40 Mb);</br>
+			   		PPTX (до 50 Mb);</br>
+		   		</div>
+		   
+				<div class="text-block">
+			   		<b>Использовано:</b></br>
+			   		27.34 Mb из 100.00 Mb</br>
+		   		</div>   
+			</div>
+
+		 	<div class="left-line right-line top">
+			   	<table class="top-table">
+			   		<thead>
+				   		<tr><th class="top-line bottom-line">Файл</th><th class="pull-text-left">Размер (kB)</th><th>Дата и время</th><th>Удалить</th></tr>
+				   </thead>
+				   <tbody>
+					   	<tr>
+					   		<td>
+					   			<a href="#">firstZIP.zip</a>
+					   		</td>
+					   		<td>132.22</td>
+					   		<td class="pull-text-center">
+					   			<time>2018.06.19 13.01.00</time>
+					   		</td>
+					   		<td class="pull-text-center">
+					   			<a href="#" class="delete-link">Удалить</a>
+					   		</td>
+					   	</tr>
+					   	<tr>
+					   		<td>
+					   			<a href="#">secondZIP.zip</a>
+					   		</td>
+					   		<td>132.45</td>
+					   		<td class="pull-text-center">
+					   			<time>2018.06.19 13.00.00</time>
+					   		</td>
+					   		<td class="pull-text-center">
+					   			<a href="#" class="delete-link">Удалить</a>
+					   		</td>
+					   	</tr>
+				   </tbody>
+			   	</table>
+
+				<form action="#" method="POST">
+					<fieldset class="form-border">
+						Загрузить новый файл:<br/>
+				   		<div class="input-horizontal-block">
+				   			<div class="fixed-button-size">
+				   				<input id="choose"  name="file" type="button" value="Выбрать"/>
+				   			</div>
+				   			<div class="fixed-input-size-with_button">
+				   				<input id="fileName"  name="fileName" type="text"/>
+				   			</div>
+				   		</div>
+				   		<div class="input-horizontal-block">
+				   			<div class="fixed-button-size">
+				   				<input id="download" name="download" type="button" value="Загрузить" />
+				   			</div>
+				   		</div> 
+					</fieldset>
+				</form>
+
+				<form action="#" method="POST">
+					<fieldset class="form-border">
+						Запросить с удаленного сервера:<br/>
+						<div class="input-horizontal-block">
+				   			<div class="fixed-input-size-without_button">
+				   				<input class="input-horizontal" id="remoteServer" name="remoteServer" type="text"/>
+				   			</div>
+				   		</div>
+				   			<label for="to_storage" class="left-center_align_block">Поместить в хранилище:
+				   				<input type="checkbox"  id="to_storage" name="to_storage">
+				   			</label>
+				   		<div class="input-horizontal-block">
+				   			<div class="fixed-button-size">
+				   				<input id="request" name="request" type="submit" value="Запросить"/>
+				   			</div>
+				   		</div>
+					</fieldset>
+				</form>
+
+			</div>
+
+		    <div id="right-bar">
+			   	<div class="text-block">
+			   		<b>Статистика:</b></br>
+			   		Пользователи: 123</br>
+			   		Файлов: 1234</br>
+			   		Объем: 2345 Mb</br>
+			   		Объем/Польз.: 45 Mb</br>
+		   		</div>
+		   	</div>
+            </div>
+			<div id="clear"></div>
+			<footer id="footer" class="top-line">&copy; 2018, EPAM RD Java Training</footer>
+		</div>
+    </body>
+</html>

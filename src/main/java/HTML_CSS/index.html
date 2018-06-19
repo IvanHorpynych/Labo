@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+		<link rel="stylesheet" href="css/style.css">
+    	<link rel="stylesheet" href="css/inner.css">
+    </head>
+    <title>Outer page</title>
+ 
+    <body>
+    	<div class="main">
+			<header  class="bottom-line">
+				<img src="image/folder.png" alt="альтернативный текст"/>
+				<div class="head-text"  >
+					Файловое хранилище
+				</div>
+				<img src="image/folder.png" alt="альтернативный текст"/>
+			</header>
+
+		    <div class="string pull-text-right bottom-line">
+				Необходимо выполнить вход в систему.
+		    </div>
+
+            <div class="container bottom-line">
+			<div id="left-bar">
+			</div>
+
+		 	<div class="left-line right-line top">
+				<form action="inner_page.html" method="POST">
+					<fieldset class="form-border">
+						<div class="string-block">
+							<label for="login" class="label-text">Логин:</label>
+							<div class="vertical-input-block"><input id="login" name="login" type="text"/></div>
+						</div>
+						<div class="string-block">
+							<label for="password" class="label-text">Пароль:</label>
+							<div class="vertical-input-block"><input id="password" name="password" type="password"/></div>
+						</div>
+						<div class="string-block">
+							<label for="memorise" class="label-text">Запомнить:</label>
+							<div class="vertical-input-block"><input id="memorise" name="memorise" type="checkbox"/></div>
+						</div>
+						<div class="string-block">
+							<div class="label-text"></div>
+							<div class="vertical-input-block"><input type="submit" value="Войти"/></div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+
+		    <div id="right-bar">
+				<div class="text-block">
+					<b>Статистика:</b></br>
+					Пользователи: 123</br>
+					Файлов: 1234</br>
+					Объем: 2345 Mb</br>
+					Объем/Польз.: 45 Mb</br>
+				</div>
+		   	</div>
+            </div>
+			<div id="clear"></div>
+			<footer id="footer" class="top-line">&copy; 2018, EPAM RD Java Training</footer>
+		</div>
+    </body>
+</html>
