@@ -6,7 +6,17 @@ Write a function that validates a series of braces.
 */
 
 function validSequence(braces) {
- // Write code here
+    var atBeginning = "";
+    while (braces != atBeginning)
+    {
+        atBeginning = braces;
+        braces = braces
+            .replace('()', '')
+            .replace('[]', '')
+            .replace('{}', '')
+            .replace('<>', '');                
+    }
+    return (braces.length == 0);
 }
 
 test('Simple valid cases', function() {

@@ -10,7 +10,14 @@ discounts is an array of objects like { name: 'Milk', discount: '10%' }
 */
 
 function totalCost(goods, discounts) {
-  // Write your code here
+  var result = 0;
+    for(var thing of goods){
+      var price = thing.value * thing.amount;
+      var discount = discounts.find((item) => {return item.name == thing.name});
+      if(discount) price -= price * Number(discount.discount.replace('%',''))/100;
+      result += price;
+    };
+  return result;
 }
 
 test('Shopping cart', function() {

@@ -2,7 +2,13 @@
 module('Adder');
 
 function adder() {
-  // body should be there
+  var sum = arguments[0];
+  function aux(b){
+    sum += b;
+    return aux;
+  }
+  aux.toString = function(){return sum;}
+  return aux;
 }
 
 test('adder', function() {

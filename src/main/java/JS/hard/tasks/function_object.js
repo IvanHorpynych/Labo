@@ -10,7 +10,18 @@ obj() == obj.callable()
 */
 
 function callableConstructor(fn) {
-  // Write your code here
+  return function(side) {
+	  var obj = new fn(side);
+	  var func = obj.callable.bind(obj);
+	  func.__proto__ = obj.__proto__
+      for (key in obj) {
+        if (obj[key] instanceof Object) {
+          continue;
+        }
+        func[key] = obj[key];
+      }
+	  return func;
+  }
 }
 
 test('Function object', function() {

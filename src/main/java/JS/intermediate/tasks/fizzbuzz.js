@@ -17,7 +17,19 @@ fizzBuzz(15) == '1 2 Fizz 4 Buzz Fizz 7 8 Fizz Buzz 11 Fizz 13 14 FizzBuzz'
 */
 
 function fizzBuzz(n) {
-  // Write your code here
+	var result = [];
+	for(var i = 1; i <= n; i++){
+		if(i%3==0 & i%5==0){
+			result[i-1] = 'FizzBuzz';
+		} else if(i%3==0) {
+			result[i-1] = 'Fizz';
+		} else if(i%5==0) {
+			result[i-1] = 'Buzz';
+		} else {
+			result[i-1] = i;
+		}
+	}
+	return result.join(' ');
 }
 
 test('FizzBuzz', function() {

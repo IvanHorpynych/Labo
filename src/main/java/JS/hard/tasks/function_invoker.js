@@ -13,7 +13,20 @@ Must call supplied function as (1, 2, undefined, 4)
 */
 
 function invoker(fn, args) {
-  // function body
+  var ARGUMENT_NAMES = /([^\s,]+)/g;
+  function getParamNames(func) {
+    var fnStr = func.toString();
+    var result = fnStr.slice(fnStr.indexOf('(')+1, fnStr.indexOf(')')).match(ARGUMENT_NAMES);
+    if(result === null)
+       result = [];
+    return result;
+  }
+  var fn_args = getParamNames(fn);
+  var ar = [];
+  for (var i = 0; i < fn_args.length; i++){
+    ar.push(args[fn_args[i]]);
+  }
+  fn.apply(null, ar);
 }
 
 test('First case', function() {

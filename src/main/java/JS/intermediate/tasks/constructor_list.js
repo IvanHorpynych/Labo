@@ -7,13 +7,14 @@ chain.
 */
 
 function constructorList(object) {
-  // Write your code here
+  var constructors = []; 
+  if(!object.__proto__){
+    constructors.unshift(null);
+  } else {
+    constructors.unshift(object.__proto__.constructor, ...constructorList(object.__proto__));
+  }
+  return constructors;
 }
-
-test('built-in', function() {
-  deepEqual(constructorList([]), [Array, Object, null], 'Array');
-  deepEqual(constructorList({}), [Object, null], 'Object');
-});
 
 test('custom', function() {
   var Mammal = function(name) {
@@ -33,4 +34,9 @@ test('custom', function() {
 
   deepEqual(constructorList(mammal), [Mammal, Object, null], 'Mammal');
   deepEqual(constructorList(bat), [Bat, Mammal, Object, null], 'Mammal');
+});
+
+test('built-in', function() {
+  deepEqual(constructorList([]), [Array, Object, null], 'Array');
+  deepEqual(constructorList({}), [Object, null], 'Object');
 });
