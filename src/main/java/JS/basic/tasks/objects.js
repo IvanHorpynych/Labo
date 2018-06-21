@@ -7,24 +7,24 @@ test('Object literal notation', function() {
     age:102
   };
 
-  equal(___, person.name, 'What is the person\'s name?');
-  equal(___, person.age, 'What is the person\'s age?');
+  equal('Amory Blaine', person.name, 'What is the person\'s name?');
+  equal(102, person.age, 'What is the person\'s age?');
 });
 
 test('Dynamically adding properties', function() {
   var person = {};
   person.name = 'Amory Blaine';
   person.age = 102;
-  equal(___, person.name, 'What is the person\'s name?');
-  equal(___, person.age, 'What is the person\'s age?');
+  equal('Amory Blaine', person.name, 'What is the person\'s name?');
+  equal(102, person.age, 'What is the person\'s age?');
 });
 
 test('Adding properties from strings', function() {
   var person = {};
   person['name'] = 'Amory Blaine';
   person['age'] = 102;
-  equal(___, person.name, 'What is the person\'s name?');
-  equal(___, person.age, 'What is the person\'s age?');
+  equal('Amory Blaine', person.name, 'What is the person\'s name?');
+  equal(102, person.age, 'What is the person\'s age?');
 });
 
 test('Adding functions', function() {
@@ -35,5 +35,5 @@ test('Adding functions', function() {
       return 'I '+ this.name+' am '+this.age+' years old.';  // HINT: use the 'this' keyword to refer to the person object.
     }
   };
-  equal(___, person.toString(), 'What should the toString function be?');
+  equal('I '+ 'Amory Blaine'+' am '+102+' years old.', person.toString(), 'What should the toString function be?');
 });
